@@ -1,6 +1,6 @@
 # Python Projects
 
-A collection of Python projects built to develop programming fundamentals, problem-solving abilities, and software development skills through practical implementation.
+A collection of Python projects developed to strengthen programming fundamentals, problem-solving abilities, and software development skills through practical implementation.
 
 Projects are organized progressively, starting with foundational programming concepts and advancing toward more complex applications.
 
@@ -18,60 +18,46 @@ Projects are organized progressively, starting with foundational programming con
 
 | Category | Primary Focus |
 |---|---|
-| **01. Programming Fundamentals** | Variables, data types, operators, conditions, loops, functions, and basic problem-solving |
-| **02. Data Structures** | Lists, tuples, dictionaries, sets, and nested data structures |
-| **03. Functions and File Handling** | Modular programming, scope, exception handling, file operations, JSON, and CSV |
-| **04. Object-Oriented Programming** | Classes, objects, encapsulation, inheritance, and composition |
-| **05. Utilities and Automation** | File systems, OS operations, command-line utilities, and automation |
-| **06. Integrated Applications** | Combining multiple Python concepts to build practical applications |
+| `01_basic_programming` | Variables, data types, operators, conditions, loops, functions, and basic problem-solving |
+| `02_data_structures` | Lists, tuples, dictionaries, sets, and nested data structures |
+| `03_functions_and_files` | Modular programming, scope, exception handling, file handling, JSON, and CSV |
+| `04_oop` | Classes, objects, encapsulation, inheritance, and composition |
+| `05_utilities_and_automation` | File systems, OS operations, command-line utilities, and automation |
+| `06_integrated_applications` | Combining multiple Python concepts to build practical applications |
 
-> **Note:** Categories represent the primary learning objectives of each project, not strict limitations on the concepts used. A project may incorporate concepts from multiple categories when necessary.
-
-## Development Workflow
-
-Each project follows a structured development process:
-
-1. **Problem Understanding** — Identify the problem and define requirements.
-2. **Planning and Design** — Determine the approach and break down the solution.
-3. **Implementation** — Develop the core functionality.
-4. **Testing and Debugging** — Verify behavior and handle edge cases.
-5. **Code Improvement** — Improve readability, structure, and maintainability.
-6. **Documentation** — Document functionality, implementation, and usage.
-
-## Technologies and Tools
-
-- **Language:** Python
-- **Version Control:** Git and GitHub
-- **Libraries:** Python Standard Library
-- **Testing:** pytest
-
-## Progress
-
-| Metric | Target |
-|---|---:|
-| Total Projects | 30 |
-| Completed | 1 |
-| Remaining | 29 |
+**Note:** Categories represent the primary learning objectives of each project, not strict limitations on the concepts used. Projects may incorporate concepts from multiple categories when necessary.
 
 ## Repository Structure
 
 ```text
 python-projects/
 │
-├── 01-programming-fundamentals/
-├── 02-data-structures/
-├── 03-functions-and-file-handling/
-├── 04-object-oriented-programming/
-├── 05-utilities-and-automation/
-├── 06-integrated-applications/
+├── 01_basic_programming/
+├── 02_data_structures/
+├── 03_functions_and_files/
+├── 04_oop/
+├── 05_utilities_and_automation/
+├── 06_integrated_applications/
 │
 └── README.md
 ```
 
-*The repository structure may evolve as new projects and concepts are introduced.*
+## Development Workflow
 
-## Career Direction
+1. **Understand** — Identify the problem and define requirements.
+2. **Design** — Plan the approach and break down the solution.
+3. **Implement** — Develop the core functionality.
+4. **Test** — Verify behavior and handle edge cases.
+5. **Improve** — Refactor code for readability and maintainability.
+6. **Document** — Explain functionality, implementation, and usage.
 
-This repository is part of my practical learning journey toward becoming an **AI Engineer**.
+## Technologies and Tools
 
-The focus is on developing strong programming foundations and software engineering skills that will support further learning in Artificial Intelligence, Machine Learning, and AI application development.
+- **Programming Language:** Python
+- **Version Control:** Git and GitHub
+- **Libraries:** Python Standard Library
+- **Testing:** pytest
+
+## Progress
+
+**Target:** 30 Python Projects
