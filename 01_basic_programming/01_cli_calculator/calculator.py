@@ -1,6 +1,3 @@
-from unittest import result
-
-
 def user_input():
 
     while True:
