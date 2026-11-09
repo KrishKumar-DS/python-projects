@@ -1,3 +1,6 @@
+from unittest import result
+
+
 def user_input():
 
     while True:
@@ -74,9 +77,9 @@ def operation():
 
         selected_operation = operations[choice]
 
-        op = selected_operation()
+        result = selected_operation()
 
-        print(op)
+        print(f"Result: {result}")
 
         while True:
             cont = input(
