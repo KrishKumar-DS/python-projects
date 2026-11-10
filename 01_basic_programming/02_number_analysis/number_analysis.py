@@ -23,7 +23,7 @@ def check_parity(num):
 
     if num % 2 == 0:
         return "Even"
-    elif num % 2 != 0:
+    else:
         return "Odd"
 
 
