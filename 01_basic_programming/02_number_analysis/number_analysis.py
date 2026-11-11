@@ -53,19 +53,47 @@ def check_factorial(num):
     return result
 
 
+def check_prime():
+    pass
+
+
+def count_digit(num):
+
+    count = 0
+    for i in str(num):
+        count += 1
+
+    return count
+
+
+def digit_sum(num):
+
+    total = 0
+    for i in str(num):
+
+        if i.isdigit():
+            total += int(i)
+
+    return total
+
+
 def main():
     n = user_input()
 
-    # typ = check_type(n)
+    typ = check_type(n)
     typ1 = check_square(n)
     typ2 = check_parity(n)
     typ3 = check_cube(n)
     typ = check_factorial(n)
+    typ4 = count_digit(n)
+    typ5 = digit_sum(n)
 
     print(typ)
     print(typ1)
     print(typ2)
     print(typ3)
+    print(typ4)
+    print(typ5)
 
 
 if __name__ == "__main__":
