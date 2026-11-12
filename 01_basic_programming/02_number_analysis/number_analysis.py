@@ -121,7 +121,9 @@ def main():
 
         elif choice == "n":
             print("Exiting......")
+            print("="*30)
             break
+
         else:
             print("Invalid Input! Enter y/n...")
             continue
