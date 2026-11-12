@@ -2,8 +2,12 @@ def user_input():
 
     while True:
         try:
-            num = float(input("Enter the number: "))
-            return num
+            num = (input("Enter the number: "))
+
+            if "." in num:
+                return float(num)
+
+            return int(num)
 
         except ValueError:
             print("Invalid Input! Enter numerical value")
@@ -21,7 +25,10 @@ def check_type(num):
 
 def check_parity(num):
 
-    if num % 2 == 0:
+    if "." in str(num):
+        return "Float can't have parity"
+
+    if int(num) % 2 == 0:
         return "Even"
     else:
         return "Odd"
@@ -40,15 +47,15 @@ def check_cube(num):
 def check_factorial(num):
     if num < 0:
         return "Negative number can't have factorial"
-    elif num == 0:
-        return 1
+    elif not num.is_integer():
+        return "Factorial requires an integer"
 
-    if num.is_integer():
-        result = 1
-        n = num
-        while n >= 1:
-            result = result * n
-            n = n - 1
+    result = 1
+    n = int(num)
+
+    while n >= 1:
+        result = result * n
+        n = n - 1
 
     return result
 
@@ -61,7 +68,8 @@ def count_digit(num):
 
     count = 0
     for i in str(num):
-        count += 1
+        if "." not in i:
+            count += 1
 
     return count
 
@@ -77,23 +85,46 @@ def digit_sum(num):
     return total
 
 
-def main():
+def display():
     n = user_input()
 
-    typ = check_type(n)
-    typ1 = check_square(n)
-    typ2 = check_parity(n)
-    typ3 = check_cube(n)
-    typ = check_factorial(n)
-    typ4 = count_digit(n)
-    typ5 = digit_sum(n)
+    number_type = check_type(n)
+    square = check_square(n)
+    cube = check_cube(n)
+    parity = check_parity(n)
+    factorial = check_factorial(n)
+    count = count_digit(n)
+    digi_sum = digit_sum(n)
 
-    print(typ)
-    print(typ1)
-    print(typ2)
-    print(typ3)
-    print(typ4)
-    print(typ5)
+    print(f"Type: {number_type}")
+    print(f"Parity: {parity}")
+    print(f"Square: {square}")
+    print(f"Cube: {cube}")
+    print(f"Factorial: {factorial}")
+    print(f"Digit Count: {count}")
+    print(f"Digit Sum: {digi_sum}")
+
+
+def main():
+
+    print("="*30)
+    print("       NUMBER ANALYZER")
+    print("="*30)
+
+    while True:
+        choice = input("Want to use Number Analyzer: ").strip().lower()
+
+        if choice in ['y', 'yes']:
+            display()
+
+            print("="*30)
+
+        elif choice in ['n', 'no']:
+            print("Exiting......")
+            break
+        else:
+            print("Invalid Input! Enter y/n...")
+            continue
 
 
 if __name__ == "__main__":
