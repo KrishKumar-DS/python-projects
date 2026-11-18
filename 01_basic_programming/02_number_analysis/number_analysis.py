@@ -68,7 +68,7 @@ def count_digit(num):
 
     count = 0
     for i in str(num):
-        if "." not in i:
+        if "." not in i and "-" not in i and "+" not in i:
             count += 1
 
     return count
