@@ -114,12 +114,12 @@ def main():
     while True:
         choice = input("Want to use Number Analyzer: ").strip().lower()
 
-        if choice == "y":
+        if choice in ["y", "yes"]:
             display()
 
             print("="*30)
 
-        elif choice == "n":
+        elif choice in ["n", "no"]:
             print("Exiting......")
             print("="*30)
             break
