@@ -60,8 +60,18 @@ def check_factorial(num):
     return result
 
 
-def check_prime():
-    pass
+def check_prime(num):
+
+    if num <= 1:
+        return "Non-Prime"  # If not prime
+
+    else:
+        for i in range(2, num):
+            if num % i == 0:
+                return "No"  # If not prime
+
+        else:
+            return "Yes"  # If Prime
 
 
 def count_digit(num):
@@ -92,6 +102,7 @@ def display():
     square = check_square(n)
     cube = check_cube(n)
     parity = check_parity(n)
+    prime = check_prime(n)
     factorial = check_factorial(n)
     count = count_digit(n)
     digi_sum = digit_sum(n)
@@ -100,6 +111,7 @@ def display():
     print(f"Parity: {parity}")
     print(f"Square: {square}")
     print(f"Cube: {cube}")
+    print(f"Prime: {prime}")
     print(f"Factorial: {factorial}")
     print(f"Digit Count: {count}")
     print(f"Digit Sum: {digi_sum}")
