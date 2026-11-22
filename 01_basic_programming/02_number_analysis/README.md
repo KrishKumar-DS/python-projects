@@ -17,7 +17,7 @@ The project focuses on practicing Python fundamentals, particularly conditional 
 
 ## Technologies Used
 
-- **Language:** Python 3
+- **Language:** Python 3.12+
 - **Libraries:** Python Standard Library
 - **Interface:** Command-Line Interface (CLI)
 
@@ -66,19 +66,22 @@ The project focuses on practicing Python fundamentals, particularly conditional 
 ## Example Execution
 
 ```text
-Enter a number: 7
+==============================
+       NUMBER ANALYZER
+==============================
+Want to use Number Analyzer: y
 
-------NUMBER ANALYSIS------
+Enter the number: 7
 
-Number: 7
 Type: Positive
 Parity: Odd
 Square: 49
 Cube: 343
-Factorial: 5040
 Prime: Yes
+Factorial: 5040
 Digit Count: 1
 Digit Sum: 7
+==============================
 ```
 
 ## Python Concepts Practiced
