@@ -2,7 +2,7 @@ def user_input():
 
     while True:
         try:
-            num = (input("Enter the number: "))
+            num = (input("\nEnter the number: "))
 
             if "." in num:
                 return float(num)
@@ -25,13 +25,10 @@ def check_type(num):
 
 def check_parity(num):
 
-    if "." in str(num):
-        return "Float can't have parity"
+    if not num.is_integer():
+        return "Only integers have parity"
 
-    if int(num) % 2 == 0:
-        return "Even"
-    else:
-        return "Odd"
+    return "Even" if num % 2 == 0 else "Odd"
 
 
 def check_square(num):
@@ -62,16 +59,20 @@ def check_factorial(num):
 
 def check_prime(num):
 
-    if num <= 1:
-        return "Non-Prime"  # If not prime
-
-    else:
-        for i in range(2, num):
-            if num % i == 0:
-                return "No"  # If not prime
+    if num.is_integer():
+        if num <= 1:
+            return "No"  # If not prime
 
         else:
-            return "Yes"  # If Prime
+            num = int(num)
+            for i in range(2, num):
+                if num % i == 0:
+                    return "No"  # If not prime
+
+            else:
+                return "Yes"  # If Prime
+    else:
+        return "Float can't have Prime"
 
 
 def count_digit(num):
