@@ -63,21 +63,27 @@ def check_factorial(num):
 
 
 def check_prime(num):
-
-    if num.is_integer():
-        if num <= 1:
-            return "No"  # If not prime
-
-        else:
-            num = int(num)
-            for i in range(2, num):
-                if num % i == 0:
-                    return "No"  # If not prime
-
-            else:
-                return "Yes"  # If Prime
-    else:
+    if not num.is_integer():
         return "Float can't have Prime"
+
+    n = int(num)
+
+    if n <= 1:  # numbers less than 1 or 1 can't be prime
+        return "No"
+
+    if n == 2:  # 2 is only even prime number
+        return "Yes"
+
+    if n % 2 == 0:  # Except for 2 all even number are non-prime
+        return "No"
+
+    i = 3
+    while i*i <= n:
+        if n % i == 0:
+            return "No"
+        i += 2
+
+    return "Yes"
 
 
 def count_digit(num):
