@@ -1,17 +1,17 @@
 def user_input():
 
     while True:
+        num = (input("\nEnter the number: "))
+
         try:
-            num = (input("\nEnter the number: "))
-
-            if "." in num:
-                return float(num)
-
             return int(num)
+        except ValueError:
+            pass
 
+        try:
+            return float(num)
         except ValueError:
             print("Invalid Input! Enter numerical value")
-            continue
 
 
 def check_type(num):
@@ -90,7 +90,7 @@ def count_digit(num):
 
     count = 0
     for i in str(num):
-        if "." not in i and "-" not in i and "+" not in i:
+        if i.isdigit():
             count += 1
 
     return count
@@ -99,8 +99,8 @@ def count_digit(num):
 def digit_sum(num):
 
     total = 0
-    for i in str(num):
 
+    for i in str(num):
         if i.isdigit():
             total += int(i)
 
