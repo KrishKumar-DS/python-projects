@@ -42,7 +42,12 @@ def check_cube(num):
 
 
 def check_factorial(num):
-    if num < 0:
+
+    MAX = 1000
+
+    if num > MAX:
+        return f"Too Large for Factorial, MAX: {MAX}"
+    elif num < 0:
         return "Negative number can't have factorial"
     elif not num.is_integer():
         return "Factorial requires an integer"
@@ -143,4 +148,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (EOFError, KeyboardInterrupt):
+        print("\nExiting.....")
