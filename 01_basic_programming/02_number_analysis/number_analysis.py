@@ -25,7 +25,7 @@ def check_type(num):
 
 def check_parity(num):
 
-    if not num.is_integer():
+    if not float(num).is_integer():
         return "Only integers have parity"
 
     return "Even" if num % 2 == 0 else "Odd"
@@ -49,7 +49,7 @@ def check_factorial(num):
         return f"Too Large for Factorial, MAX: {MAX}"
     elif num < 0:
         return "Negative number can't have factorial"
-    elif not num.is_integer():
+    elif not float(num).is_integer():
         return "Factorial requires an integer"
 
     result = 1
@@ -63,7 +63,7 @@ def check_factorial(num):
 
 
 def check_prime(num):
-    if not num.is_integer():
+    if not float(num).is_integer():
         return "Float can't have Prime"
 
     n = int(num)
