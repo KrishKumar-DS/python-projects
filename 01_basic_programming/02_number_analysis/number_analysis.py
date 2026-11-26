@@ -43,12 +43,12 @@ def check_factorial(num):
 
     MAX = 1000
 
-    if num > MAX:
-        return f"Too Large for Factorial, MAX: {MAX}"
-    elif num < 0:
+    if num < 0:
         return "Negative number can't have factorial"
     elif not float(num).is_integer():
         return "Factorial requires an integer"
+    elif num > MAX:
+        return f"Too Large for Factorial, MAX: {MAX}"
 
     result = 1
     n = int(num)
@@ -62,7 +62,7 @@ def check_factorial(num):
 
 def check_prime(num):
     if not float(num).is_integer():
-        return "Float can't have Prime"
+        return "Only integers can be prime"
 
     n = int(num)
 
@@ -114,8 +114,8 @@ def display():
     parity = check_parity(n)
     prime = check_prime(n)
     factorial = check_factorial(n)
-    count = count_digit(n)
-    digi_sum = digit_sum(n)
+    digit_count_result = count_digit(n)
+    digit_sum_result = digit_sum(n)
 
     print(f"Type: {number_type}")
     print(f"Parity: {parity}")
@@ -123,8 +123,8 @@ def display():
     print(f"Cube: {cube}")
     print(f"Prime: {prime}")
     print(f"Factorial: {factorial}")
-    print(f"Digit Count: {count}")
-    print(f"Digit Sum: {digi_sum}")
+    print(f"Digit Count: {digit_count_result}")
+    print(f"Digit Sum: {digit_sum_result}")
 
 
 def main():
