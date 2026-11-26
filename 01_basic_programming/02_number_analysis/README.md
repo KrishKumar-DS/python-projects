@@ -6,14 +6,14 @@ The project focuses on practicing Python fundamentals, particularly conditional 
 
 ## Features
 
-- **Number Classification:** Identifies whether a number is positive, negative, or zero.
-- **Even or Odd:** Determines whether the number is even or odd.
+- **Number Classification:** Identifies whether a number is positive, negative, or zero (`Positive`, `Negative`, or `It's Zero`).
+- **Even or Odd:** Determines the parity of an integer; non-integers return an explanatory message.
 - **Square & Cube:** Calculates the square and cube of the number.
-- **Factorial:** Calculates the factorial of a non-negative integer.
-- **Prime Number Check:** Determines whether the number is prime.
-- **Digit Count:** Counts the total number of digits.
-- **Digit Sum:** Calculates the sum of the digits.
-- **Input Validation:** Handles invalid numeric inputs.
+- **Factorial:** Calculates the factorial of a non-negative integer up to 1000; larger inputs are rejected.
+- **Prime Number Check:** Determines whether an integer is prime and reports `Yes` or `No`.
+- **Digit Count:** Counts the digits as written, ignoring the sign and decimal point (fractional digits are included).
+- **Digit Sum:** Sums the digits as written, ignoring the sign and decimal point.
+- **Input Validation:** Re-prompts until a valid number or `y`/`n` choice is entered.
 
 ## Technologies Used
 
@@ -53,14 +53,14 @@ The project focuses on practicing Python fundamentals, particularly conditional 
 
 | Operation | Description |
 |---|---|
-| Number Classification | Identifies positive, negative, or zero |
-| Even or Odd | Determines the parity of the number |
+| Number Classification | Identifies positive, negative, or zero (`It's Zero` for 0) |
+| Even or Odd | Parity of an integer; non-integers get a message |
 | Square | Calculates the square of the number |
 | Cube | Calculates the cube of the number |
-| Factorial | Calculates the factorial of a non-negative integer |
-| Prime Check | Checks whether the number is prime |
-| Digit Count | Counts the number of digits |
-| Digit Sum | Calculates the sum of all digits |
+| Factorial | Factorial of a non-negative integer up to 1000 |
+| Prime Check | Reports `Yes`/`No`; integers only |
+| Digit Count | Digits as written, ignoring sign and decimal point |
+| Digit Sum | Sum of digits as written, ignoring sign and decimal point |
 
 
 ## Example Execution
@@ -72,7 +72,6 @@ The project focuses on practicing Python fundamentals, particularly conditional 
 Want to use Number Analyzer: y
 
 Enter the number: 7
-
 Type: Positive
 Parity: Odd
 Square: 49
@@ -81,6 +80,9 @@ Prime: Yes
 Factorial: 5040
 Digit Count: 1
 Digit Sum: 7
+==============================
+Want to use Number Analyzer: n
+Exiting......
 ==============================
 ```
 
@@ -98,12 +100,14 @@ Digit Sum: 7
 
 ## Error Handling
 
-The program should handle:
+The program handles:
 
-- Non-numeric inputs.
-- Invalid number formats.
-- Negative numbers for factorial calculations.
-- Non-integer values for operations that require integers.
+- Non-numeric input such as `abc` or an empty line: prints `Invalid Input! Enter numerical value` and re-prompts.
+- Invalid menu choice: prints `Invalid Input! Enter y/n...` and re-prompts.
+- Negative numbers for factorial return `Negative number can't have factorial`.
+- Non-integer values for parity, prime, or factorial return an explanatory message instead of a result.
+- Factorial inputs above 1000 return `Too Large for Factorial, MAX: 1000`.
+- `float()` also accepts `nan`, `inf`, and scientific notation such as `1e3`; these are currently not validated and can produce misleading output (known limitation).
 
 ## Learning Outcomes
 
@@ -118,11 +122,11 @@ Through this project, I practiced how to:
 
 ## Future Improvements
 
-- Add support for analyzing multiple numbers.
-- Introduce additional mathematical operations.
-- Improve output formatting.
-- Add automated unit tests.
-- Separate mathematical logic from the command-line interface.
+- Support batch analysis (comma-separated or file input) instead of one number at a time.
+- Validate and reject special float values (`nan`, `inf`, scientific notation).
+- Add automated unit tests for each operation.
+- Separate the mathematical logic from the command-line interface.
+- Standardise output labels and formatting.
 
 ---
 
