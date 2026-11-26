@@ -1,17 +1,15 @@
 def user_input():
 
     while True:
-        num = (input("\nEnter the number: "))
+        num = (input("\nEnter the number: ")).strip()
 
         try:
             return int(num)
         except ValueError:
-            pass
-
-        try:
-            return float(num)
-        except ValueError:
-            print("Invalid Input! Enter numerical value")
+            try:
+                return float(num)
+            except ValueError:
+                print("Invalid Input! Enter numerical value")
 
 
 def check_type(num):
