@@ -1,26 +1,3 @@
-# Category 1: Length 📏
-# From	To
-# Kilometres(km)	Metres(m)
-# Metres(m)	Kilometres(km)
-# Metres(m)	Centimetres(cm)
-# Centimetres(cm)	Metres(m)
-# Millimetres(mm)	Centimetres(cm)
-# Miles(mi)	Kilometres(km)
-# Feet(ft)	Metres(m)
-# Inches( in )	Centimetres (cm)
-
-# Category 2: Weight / Mass ⚖️
-# From	To
-# Kilograms(kg)	Grams(g)
-# Grams(g)	Kilograms(kg)
-# Milligrams(mg)	Grams(g)
-# Grams(g)	Milligrams(mg)
-# Pounds(lb)	Kilograms(kg)
-# Ounces(oz)	Grams(g)
-# Tonnes(t)	Kilograms(kg)
-
-# Category 3: Temperature 🌡️
-# From	To
 # Celsius(°C)	Fahrenheit(°F)
 # Fahrenheit(°F)	Celsius(°C)
 # Celsius(°C)	Kelvin(K)
@@ -60,11 +37,29 @@
 def length():
     print("You select Length Unit Converter")
     print("Available conversions:-")
-    print("")
+    print("1. Kilometres(km)  ->  Metres(m)"
+          "2. Metres(m)  ->  Kilometres(km)"
+          "3. Metres(m)  ->  Centimetres(cm)"
+          "4. Centimetres(cm)  ->  Metres(m)"
+          "5. Millimetres(mm)  ->  Centimetres(cm)"
+          "6. Miles(mi)  ->  Kilometres(km)"
+          "7. Feet(ft)  ->  Metres(m)"
+          "8. Inches( in )  ->  Centimetres (cm)")
+    selection = input("Enter the number: ")
 
 
 def mass():
-    pass
+    print("You select Mass/Weight Unit Converter")
+    print("Available conversions:-")
+    print("1. Kilograms(kg)  ->  Grams(g)"
+          "2. Grams(g)  ->  Kilograms(kg)"
+          "3. Milligrams(mg)  ->  Grams(g)"
+          "4. Grams(g)  ->  Milligrams(mg)"
+          "5. Pounds(lb)  ->  Kilograms(kg)"
+          "6. Ounces(oz)  ->  Grams(g)"
+          "7. Tonnes(t)  ->  Kilograms(kg)")
+
+    selection = input("Enter the number: ")
 
 
 def temperature():
