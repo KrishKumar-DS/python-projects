@@ -1,14 +1,3 @@
-# Category 6: Data Storage 💾
-# From	To
-# Bytes(B)	Kilobytes(KB)
-# Kilobytes(KB)	Bytes(B)
-# Kilobytes(KB)	Megabytes(MB)
-# Megabytes(MB)	Kilobytes(KB)
-# Megabytes(MB)	Gigabytes(GB)
-# Gigabytes(GB)	Megabytes(MB)
-# Gigabytes(GB)	Terabytes(TB)
-# Terabytes(TB)	Gigabytes(GB)
-
 def length():
     print("You select Length Unit Converter")
     print("Available conversions:-")
@@ -91,7 +80,21 @@ def speed():
 
 
 def data_storage():
-    pass
+
+    print("You select Data Storage Unit Converter")
+    print("Available conversions:-")
+    print(
+        "1. Bytes(B)  ->  Kilobytes(KB)\n"
+        "2. Kilobytes(KB)  ->  Bytes(B)\n"
+        "3. Kilobytes(KB)  ->  Megabytes(MB)\n"
+        "4. Megabytes(MB)  ->  Kilobytes(KB)\n"
+        "5. Megabytes(MB)  ->  Gigabytes(GB)\n"
+        "6. Gigabytes(GB)  ->  Megabytes(MB)\n"
+        "7. Gigabytes(GB)  ->  Terabytes(TB)\n"
+        "8. Terabytes(TB)  ->  Gigabytes(GB)\n"
+    )
+
+    selection = input("Enter the number: ")
 
 
 def unit_selection():
