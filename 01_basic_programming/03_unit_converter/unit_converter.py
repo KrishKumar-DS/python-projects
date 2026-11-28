@@ -110,10 +110,7 @@ def unit_selection():
     while True:
         category = input("Enter the Category you want to select: ").strip()
 
-        if category == "":
-            print("")
-            continue
-        elif category.lower() == "exit":
+        if category.lower() == "exit":
             print("Exiting...")
             break
 
