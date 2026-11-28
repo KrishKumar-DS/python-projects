@@ -1,28 +1,3 @@
-# Celsius(°C)	Fahrenheit(°F)
-# Fahrenheit(°F)	Celsius(°C)
-# Celsius(°C)	Kelvin(K)
-# Kelvin(K)	Celsius(°C)
-# Fahrenheit(°F)	Kelvin(K)
-# Kelvin(K)	Fahrenheit(°F)
-
-
-# Category 4: Time ⏱️
-# From	To
-# Seconds	Minutes
-# Minutes	Hours
-# Hours	Minutes
-# Hours	Days
-# Days	Hours
-# Days	Weeks
-# Weeks	Days
-
-# Category 5: Speed 🚀
-# From	To
-# km/h	m/s
-# m/s	km/h
-# mph	km/h
-# km/h	mph
-
 # Category 6: Data Storage 💾
 # From	To
 # Bytes(B)	Kilobytes(KB)
@@ -37,41 +12,82 @@
 def length():
     print("You select Length Unit Converter")
     print("Available conversions:-")
-    print("1. Kilometres(km)  ->  Metres(m)"
-          "2. Metres(m)  ->  Kilometres(km)"
-          "3. Metres(m)  ->  Centimetres(cm)"
-          "4. Centimetres(cm)  ->  Metres(m)"
-          "5. Millimetres(mm)  ->  Centimetres(cm)"
-          "6. Miles(mi)  ->  Kilometres(km)"
-          "7. Feet(ft)  ->  Metres(m)"
-          "8. Inches( in )  ->  Centimetres (cm)")
+    print(
+        "1. Kilometres(km)  ->  Metres(m)\n"
+        "2. Metres(m)  ->  Kilometres(km)\n"
+        "3. Metres(m)  ->  Centimetres(cm)\n"
+        "4. Centimetres(cm)  ->  Metres(m)\n"
+        "5. Millimetres(mm)  ->  Centimetres(cm)\n"
+        "6. Miles(mi)  ->  Kilometres(km)\n"
+        "7. Feet(ft)  ->  Metres(m)\n"
+        "8. Inches( in )  ->  Centimetres (cm)\n"
+    )
+
     selection = input("Enter the number: ")
 
 
 def mass():
+
     print("You select Mass/Weight Unit Converter")
     print("Available conversions:-")
-    print("1. Kilograms(kg)  ->  Grams(g)"
-          "2. Grams(g)  ->  Kilograms(kg)"
-          "3. Milligrams(mg)  ->  Grams(g)"
-          "4. Grams(g)  ->  Milligrams(mg)"
-          "5. Pounds(lb)  ->  Kilograms(kg)"
-          "6. Ounces(oz)  ->  Grams(g)"
-          "7. Tonnes(t)  ->  Kilograms(kg)")
+    print(
+        "1. Kilograms(kg)  ->  Grams(g)\n"
+        "2. Grams(g)  ->  Kilograms(kg)\n"
+        "3. Milligrams(mg)  ->  Grams(g)\n"
+        "4. Grams(g)  ->  Milligrams(mg)\n"
+        "5. Pounds(lb)  ->  Kilograms(kg)\n"
+        "6. Ounces(oz)  ->  Grams(g)\n"
+        "7. Tonnes(t)  ->  Kilograms(kg)\n"
+    )
 
     selection = input("Enter the number: ")
 
 
 def temperature():
-    pass
+
+    print("You select Temperature Unit Converter")
+    print("Available conversions:-")
+    print(
+        "1. Celsius(°C)  ->  Fahrenheit(°F)\n"
+        "2. Fahrenheit(°F)  ->  Celsius(°C)\n"
+        "3. Celsius(°C)  ->  Kelvin(K)\n"
+        "4. Kelvin(K)  ->  Celsius(°C)\n"
+        "5. Fahrenheit(°F)  ->  Kelvin(K)\n"
+        "6. Kelvin(K)  ->  Fahrenheit(°F)\n"
+    )
+
+    selection = input("Enter the number: ")
 
 
 def time():
-    pass
+
+    print("You select Time Unit Converter")
+    print("Available conversions:-")
+    print(
+        "1. Seconds  ->  Minutes\n"
+        "2. Minutes  ->  Hours\n"
+        "3. Hours  ->  Minutes\n"
+        "4. Hours  ->  Days\n"
+        "5. Days  ->  Hours\n"
+        "6. Days  ->  Weeks\n"
+        "7. Weeks  ->  Days\n"
+    )
+
+    selection = input("Enter the number: ")
 
 
 def speed():
-    pass
+
+    print("You select Speed Unit Converter")
+    print("Available conversions:-")
+    print(
+        "1. km/h  ->  m/s\n"
+        "2. m/s  ->  km/h\n"
+        "3. mph  ->  km/h\n"
+        "4. km/h  ->  mph\n"
+    )
+
+    selection = input("Enter the number: ")
 
 
 def data_storage():
